@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript while</h2>
+
+<p id="demo"></p>
+
+
+<script type="text/javascript">
+var imgtrack= 'offf';
+function change()
+{
+ var x= document.getElementById('bulb');
+ if(imgtrack=='offf')
+ {
+   x.src= "on.jpg";
+   imgtrack='o';
+}
+
+	else
+	{
+    x.src="off.jpeg";
+    imgtrack='offf';
+}
+}
+var timer= setInterval('change()',200)
+
+function writename()
+{ var hipara= document.getElementById('get lost');
+  var nam= document.getElementById('name');
+   hipara.innerHTML= "HI" + nam.value;
+}
+ 
+</script>
+
+<body>
+
+<img src="off.jpeg" alt="light nhi hai" id="bulb" height="200px;" width="200px" onclick="clearInterval(timer);"> 
+<p id="hi"> </p>.
+<form action="submisson.html" method="post" onsubmit="return checkinfo()">
+name: <input type="text" id= 'name'/>
+pass:<input type="password" name="password">
+<br/>
+<input type="button" value="ok" onclick="writename();" />
+</form>
+
+</body>
+</html>
